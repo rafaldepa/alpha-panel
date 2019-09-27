@@ -15,95 +15,101 @@
                     <li class="nav__item"><a href="#" class="nav__link">Twoje sprawy</a></li>
                 </ul>
             </nav>
+            <div class="panel-header__account account">
+                <a href="#" class="account__name">Nazwa partnera</a>
+            </div>
         </div>
     </header>
     <main class="panel-main">
-        <div class="panel-main__content grid grid--fluid">
-            <div class="block">
-                <div class="block__header">
-                    <h3 class="block__name">Twoje sprawy</h3>
-                    <div class="block__button"><a href="/" class="btn">Dodaj nową sprawę</a></div>
-                </div>                
-                <div class="table-responsive">
-                    <table class="table-cases table">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Klient</th>
-                                <th>Bank</th>
-                                <th>Status</th>
-                                <th>Dodano</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="table-cases__column--id"><a href="/" class="table-cases__id">1</a></td>
-                                <td class="table-cases__column--client">Jan Testowy</td>
-                                <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
-                                <td class="table-cases__column--status"><div class="badge badge--approved">Zaakceptowana</div></td>
-                                <td class="table-cases__column--date">2019-09-27 11:31:04</td>
-                            </tr>
-                            <tr>
-                                <td class="table-cases__column--id"><a href="/" class="table-cases__id">2</a></td>
-                                <td class="table-cases__column--client">Jan Testowy</td>
-                                <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
-                                <td class="table-cases__column--status"><div class="badge badge--rejected">Odrzucona</div></td>
-                                <td class="table-cases__column--date">2019-09-27 11:31:04</td>
-                            </tr>
-                            <tr>
-                                <td class="table-cases__column--id"><a href="/" class="table-cases__id">3</a></td>
-                                <td class="table-cases__column--client">Jan Testowy</td>
-                                <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
-                                <td class="table-cases__column--status"><div class="badge">W toku</div></td>
-                                <td class="table-cases__column--date">2019-09-27 11:31:04</td>
-                            </tr>
-                            <tr>
-                                <td class="table-cases__column--id"><a href="/" class="table-cases__id">1</a></td>
-                                <td class="table-cases__column--client">Jan Testowy</td>
-                                <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
-                                <td class="table-cases__column--status"><div class="badge badge--approved">Zaakceptowana</div></td>
-                                <td class="table-cases__column--date">2019-09-27 11:31:04</td>
-                            </tr>
-                            <tr>
-                                <td class="table-cases__column--id"><a href="/" class="table-cases__id">2</a></td>
-                                <td class="table-cases__column--client">Jan Testowy</td>
-                                <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
-                                <td class="table-cases__column--status"><div class="badge badge--rejected">Odrzucona</div></td>
-                                <td class="table-cases__column--date">2019-09-27 11:31:04</td>
-                            </tr>
-                            <tr>
-                                <td class="table-cases__column--id"><a href="/" class="table-cases__id">3</a></td>
-                                <td class="table-cases__column--client">Jan Testowy</td>
-                                <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
-                                <td class="table-cases__column--status"><div class="badge">W toku</div></td>
-                                <td class="table-cases__column--date">2019-09-27 11:31:04</td>
-                            </tr>
-                            <tr>
-                                <td class="table-cases__column--id"><a href="/" class="table-cases__id">1</a></td>
-                                <td class="table-cases__column--client">Jan Testowy</td>
-                                <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
-                                <td class="table-cases__column--status"><div class="badge badge--approved">Zaakceptowana</div></td>
-                                <td class="table-cases__column--date">2019-09-27 11:31:04</td>
-                            </tr>
-                            <tr>
-                                <td class="table-cases__column--id"><a href="/" class="table-cases__id">2</a></td>
-                                <td class="table-cases__column--client">Jan Testowy</td>
-                                <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
-                                <td class="table-cases__column--status"><div class="badge badge--rejected">Odrzucona</div></td>
-                                <td class="table-cases__column--date">2019-09-27 11:31:04</td>
-                            </tr>
-                            <tr>
-                                <td class="table-cases__column--id"><a href="/" class="table-cases__id">3</a></td>
-                                <td class="table-cases__column--client">Jan Testowy</td>
-                                <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
-                                <td class="table-cases__column--status"><div class="badge">W toku</div></td>
-                                <td class="table-cases__column--date">2019-09-27 11:31:04</td>
-                            </tr>
-                        </tbody>                    
-                    </table>
-                </div>                
-            </div>  
-        </div>
+        <section class="image-separator"></section>
+        <section id="your-cases" class="your-cases">
+            <div class="grid grid--fluid">
+                <div class="block">
+                    <div class="block__header">
+                        <h3 class="block__name">Twoje sprawy</h3>
+                        <div class="block__button"><a href="/" class="btn">Dodaj nową sprawę</a></div>
+                    </div>                
+                    <div class="table-responsive">
+                        <table class="table-cases table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Klient</th>
+                                    <th>Bank</th>
+                                    <th>Status</th>
+                                    <th>Dodano</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="table-cases__column--id"><a href="/" class="table-cases__id">1</a></td>
+                                    <td class="table-cases__column--client">Jan Testowy</td>
+                                    <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
+                                    <td class="table-cases__column--status"><div class="badge badge--approved">Zaakceptowana</div></td>
+                                    <td class="table-cases__column--date">2019-09-27 11:31:04</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-cases__column--id"><a href="/" class="table-cases__id">2</a></td>
+                                    <td class="table-cases__column--client">Jan Testowy</td>
+                                    <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
+                                    <td class="table-cases__column--status"><div class="badge badge--rejected">Odrzucona</div></td>
+                                    <td class="table-cases__column--date">2019-09-27 11:31:04</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-cases__column--id"><a href="/" class="table-cases__id">3</a></td>
+                                    <td class="table-cases__column--client">Jan Testowy</td>
+                                    <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
+                                    <td class="table-cases__column--status"><div class="badge">W toku</div></td>
+                                    <td class="table-cases__column--date">2019-09-27 11:31:04</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-cases__column--id"><a href="/" class="table-cases__id">1</a></td>
+                                    <td class="table-cases__column--client">Jan Testowy</td>
+                                    <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
+                                    <td class="table-cases__column--status"><div class="badge badge--approved">Zaakceptowana</div></td>
+                                    <td class="table-cases__column--date">2019-09-27 11:31:04</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-cases__column--id"><a href="/" class="table-cases__id">2</a></td>
+                                    <td class="table-cases__column--client">Jan Testowy</td>
+                                    <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
+                                    <td class="table-cases__column--status"><div class="badge badge--rejected">Odrzucona</div></td>
+                                    <td class="table-cases__column--date">2019-09-27 11:31:04</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-cases__column--id"><a href="/" class="table-cases__id">3</a></td>
+                                    <td class="table-cases__column--client">Jan Testowy</td>
+                                    <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
+                                    <td class="table-cases__column--status"><div class="badge">W toku</div></td>
+                                    <td class="table-cases__column--date">2019-09-27 11:31:04</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-cases__column--id"><a href="/" class="table-cases__id">1</a></td>
+                                    <td class="table-cases__column--client">Jan Testowy</td>
+                                    <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
+                                    <td class="table-cases__column--status"><div class="badge badge--approved">Zaakceptowana</div></td>
+                                    <td class="table-cases__column--date">2019-09-27 11:31:04</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-cases__column--id"><a href="/" class="table-cases__id">2</a></td>
+                                    <td class="table-cases__column--client">Jan Testowy</td>
+                                    <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
+                                    <td class="table-cases__column--status"><div class="badge badge--rejected">Odrzucona</div></td>
+                                    <td class="table-cases__column--date">2019-09-27 11:31:04</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-cases__column--id"><a href="/" class="table-cases__id">3</a></td>
+                                    <td class="table-cases__column--client">Jan Testowy</td>
+                                    <td class="table-cases__column--bank">ZAKŁADY PIEKARSKIE "OSKROBA"</td>
+                                    <td class="table-cases__column--status"><div class="badge">W toku</div></td>
+                                    <td class="table-cases__column--date">2019-09-27 11:31:04</td>
+                                </tr>
+                            </tbody>                    
+                        </table>
+                    </div>                
+                </div>  
+            </div>
+        </section>        
     </main>
 
     <script src="./js/main.js"></script>
