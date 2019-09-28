@@ -40,6 +40,16 @@ input, textarea, button, select {
   .grid--fluid {
     width: calc(100% - 60px);
     max-width: 100%; }
+  .grid--columns {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 20px; }
+    .grid--columns--2 {
+      grid-template-columns: repeat(2, 1fr); }
+    .grid--columns--3 {
+      grid-template-columns: repeat(3, 1fr); }
+    .grid--columns--4 {
+      grid-template-columns: repeat(4, 1fr); }
 
 /*=================
     Wrappers
@@ -170,8 +180,17 @@ input, textarea, button, select {
   width: 100%;
   overflow-x: auto; }
 
-.your-cases {
+.section-first {
   margin-top: -100px; }
+
+.new-suit__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
 .table-cases__column--id {
   width: 66px; }
@@ -294,6 +313,21 @@ input, textarea, button, select {
   transition: .125s border-color ease-in-out; }
   .form__input:active, .form__input:focus, .form__select:active, .form__select:focus {
     border-bottom-color: #001e2f; }
+  .form__input:disabled, .form__select:disabled {
+    background: #f7f7f7; }
+    .form__input:disabled:active, .form__input:disabled:focus, .form__select:disabled:active, .form__select:disabled:focus {
+      border-bottom-color: #f0f0f0; }
+
+.form__columns {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 20px; }
+  .form__columns--2 {
+    grid-template-columns: repeat(2, 1fr); }
+  .form__columns--3 {
+    grid-template-columns: repeat(3, 1fr); }
+  .form__columns--4 {
+    grid-template-columns: repeat(4, 1fr); }
 
 .btn {
   position: relative;
@@ -347,6 +381,24 @@ input, textarea, button, select {
     font-weight: 300;
     color: #001e2f;
     line-height: 1.1; }
+  .block__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
+  .block__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 20px);
+            flex: 0 0 calc(50% - 20px); }
 
 .table {
   width: 100%;

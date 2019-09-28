@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <title>ALPHA Panel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <header class="panel-header">
+        <div class="panel-header__content grid grid--fluid">
+            <a href="/panel" class="panel-header__logo"><img src="./images/logo.svg" alt="Kancelaria Alpha"></a>
+            <nav class="panel-header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link">Twoje sprawy</a></li>
+                </ul>
+            </nav>
+            <div class="panel-header__account account">
+                <a href="#" class="account__name">Nazwa partnera</a>
+            </div>
+        </div>
+    </header>
+    <main class="panel-main">
+        <section class="image-separator"></section>
+        <section class="new-suit section-first">
+            <div class="grid grid--fluid">
+                <form method="POST" action="/panel/suit/31" enctype="multipart/form-data" class="grid--columns grid--columns--2 new-suit__form form">
+                    <div class="block grid__column">
+                        <div class="block__header">
+                            <h3 class="block__name">Dane umowy</h3>
+                        </div>       
+                        <div class="form__columns form__columns--2">
+                            <label class="form__label">
+                                <span class="form__label__name">1. Instytucja</span>
+                                <input type="text" value="0000706466 / STOWARZYSZENIE NA PRZYKŁAD" name="bank_name" class="form__input" readonly disabled>
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">2. Pożyczka/Kredyt numer</span>
+                                <input type="text" name="bank_deal_date_start" class="form__input" required>
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">3. Data zawarcia umowy</span>
+                                <input type="text" id="inputDealstart" name="bank_deal_date_start" class="form__input datepicker" onchange="dateDiff()" required>
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">4. Data zakończenia umowy</span>
+                                <input type="text" id="inputDealfinish" name="bank_deal_date_finish" class="form__input datepicker" onchange="dateDiff()" required>
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">5. Data spłaty</span>
+                                <input type="text" id="inputDealfinishreal" name="bank_deal_date_finish_real" class="form__input datepicker" onchange="dateDiff()" required>
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">6. Partner</span>
+                                <input type="text" value="9 - jkhjk hghgh kjhk" name="partner_name" class="form__input" readonly disabled>
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">7. Prowizja od kredytu/pożyczki [PLN]</span>
+                                <input type="text" id="inputBankcommision" name="bank_deal_commision" class="form__input" onchange="dateDiff()" required>
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">8. WPS [PLN]</span>
+                                <input type="text" id="inputClaimamount" name="claim_amount" class="form__input" readonly disabled>
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">9. WPS [%]</span>
+                                <input type="text" id="inputClaimpercent" name="claim_percent" class="form__input" readonly disabled>
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">10. Cena wierzytelności</span>
+                                <input type="text" name="deal_price" class="form__input" required>
+                            </label>
+                        </div>      
+                    </div>  
+                    <div class="block grid__column">
+                        <div class="block__header">
+                            <h3 class="block__name">Dane klienta</h3>
+                        </div>                
+                        <div class="form__columns form__columns--2">
+                            <label class="form__label">
+                                <span class="form__label__name">11. Imię i nazwisko</span>
+                                <input type="text" name="name" class="form__input" required>
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">12. PESEL</span>
+                                <input type="text" name="pesel" value="68032354162" class="form__input" readonly disabled required>
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">13. E-mail</span>
+                                <input type="email" name="email" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">14. Telefon</span>
+                                <input type="phone" name="phone" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">15. Ulica i numer domu</span>
+                                <input type="text" name="street" class="form__input" required>
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">16. Kod pocztowy</span>
+                                <input type="text" name="zip" class="form__input" required>
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">17. Miasto</span>
+                                <input type="text" name="city" class="form__input" required>
+                            </label>
+                            <label class="form__label">
+                                <span class="form__label__name">18. Numer rachunku bankowego</span>
+                                <input type="text" name="bank_account" class="form__input" required>
+                            </label>
+                            <label class="form__label">
+                                <button type="submit" class="form__submit btn">Dodaj sprawę</button>
+                            </label>
+                        </div>            
+                    </div>  
+                </form>
+            </div>
+        </section>        
+    </main>
+    <footer class="panel-footer">
+        <div class="panel-footer__content grid grid--fluid">
+            &copy; 2019 ALPHA. All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

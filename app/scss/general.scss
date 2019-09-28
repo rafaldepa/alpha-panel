@@ -52,6 +52,16 @@ input, textarea, button, select {
         width: calc(100% - 60px);
         max-width: 100%;
     } 
+
+    &--columns {
+        display: grid;        
+        grid-template-rows: auto;
+        grid-gap: 20px;
+
+        &--2 { grid-template-columns: repeat(2, 1fr); }
+        &--3 { grid-template-columns: repeat(3, 1fr); }
+        &--4 { grid-template-columns: repeat(4, 1fr); }
+    }
 }
 
 
@@ -194,8 +204,18 @@ input, textarea, button, select {
     overflow-x: auto;
 }
 
-.your-cases {
+.section-first {
     margin-top: -100px;
+}
+
+.new-suit {
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 20px;
+        align-items: flex-start;
+    }
 }
 
 .table-cases {
@@ -321,6 +341,21 @@ input, textarea, button, select {
         &:active, &:focus {
             border-bottom-color: $accent;
         }
+
+        &:disabled {
+            background: #f7f7f7;
+            &:active, &:focus { border-bottom-color: #f0f0f0; }
+        }
+    }
+
+    &__columns {
+        display: grid;        
+        grid-template-rows: auto;
+        grid-gap: 20px;
+
+        &--2 { grid-template-columns: repeat(2, 1fr); }
+        &--3 { grid-template-columns: repeat(3, 1fr); }
+        &--4 { grid-template-columns: repeat(4, 1fr); }
     }
 }
 
@@ -369,6 +404,16 @@ input, textarea, button, select {
         font-weight: 300;
         color: $accent;
         line-height: 1.1;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-flow: row wrap;
+    }
+    &__column {
+        flex: 0 0 calc(50% - 20px);
     }
 }
 
